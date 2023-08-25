@@ -1,0 +1,41 @@
+main {
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+}
+body{
+    background-color: #18242B;
+    margin: 0;
+    
+}
+.container {
+    margin: 0 140px; 
+  }
+.uso-terapeutico{
+    text-align: center;
+}
+
+.linha-foto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px; 
+}
+
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    height: 100%; /* Certifique-se de que a altura da div seja 100% para centralização vertical */
+}
+
+.box2 img {
+    max-width: 40%; /* Ajuste para a largura total da imagem */
+}
