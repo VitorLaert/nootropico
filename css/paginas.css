@@ -39,3 +39,26 @@ body{
 .box2 img {
     max-width: 40%; /* Ajuste para a largura total da imagem */
 }
+
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Telas pequenas */
+@media (max-width: 768px) {
+    /* Ajuste os estilos para telas pequenas */
+}
+
+/* Telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajuste os estilos para telas médias */
+}
+
+/* Telas grandes */
+@media (min-width: 1025px) {
+    /* Ajuste os estilos para telas grandes */
+}
