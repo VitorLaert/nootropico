@@ -2,11 +2,12 @@
 .cardContainer {
   display: flex;
   justify-content: space-evenly; /* Distribui os cards uniformemente */
+  margin-bottom: 30px;
 }
 .cardContainer2 {
   display: flex;
   justify-content: space-evenly; /* Distribui os cards uniformemente */
-  margin-bottom: 300px;
+  
 }
 
 /* Estilos para cada card individual */
