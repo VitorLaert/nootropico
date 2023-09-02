@@ -1,133 +1,155 @@
+/* Estilização do container que segura os cards */
 .cardContainer {
-    display: flex;
-    justify-content: space-between; /* Distribui os cards uniformemente */
+  display: flex;
+  justify-content: space-evenly; /* Distribui os cards uniformemente */
+}
+.cardContainer2 {
+  display: flex;
+  justify-content: space-evenly; /* Distribui os cards uniformemente */
+  margin-bottom: 300px;
 }
 
+/* Estilos para cada card individual */
 .myCard {
-    background-color: transparent;
-    width: 300px; /* Ajuste a largura conforme necessário */
-    height: 400px; /* Ajuste a altura conforme necessário */
-    perspective: 1000px;
-    margin: 20px; /* Adicione uma margem para espaçamento */
+  background-color: transparent;
+  width: 300px; /* Ajuste a largura conforme necessário */
+  height: 400px; /* Ajuste a altura conforme necessário */
+  perspective: 1000px;
+  margin: 20px; /* Adicione uma margem para espaçamento */
 }
 
+/* Estilos para o título do card */
 .title {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
+font-size: 1.5em;
+font-weight: 900;
+text-align: center;
+margin: 0;
 }
 
+/* Estilos para o conteúdo interno do card */
 .innerCard {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  cursor: pointer;
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+cursor: pointer;
 }
 
+/* Efeito de rotação ao passar o mouse sobre o card */
 .myCard:hover .innerCard {
-  transform: rotateY(180deg);
+transform: rotateY(180deg);
 }
 
+/* Estilos para o lado frontal e traseiro do card */
 .frontSide,
 .backSide {
-  position: absolute;
+position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+border: 1px solid rgba(255, 255, 255, 0.8);
+border-radius: 1rem;
+box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+font-weight: 700;
+text-align: center;
+font-family: "Helvetica", "Lucida Grande", sans-serif;
+color: #fafafa;
+font-size: 20px;
+}
+
+/* Estilos para a parte frontal */
+.frontSide,
+.frontSide::before {
+background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+
+/* Estilos para a parte traseira */
+.backSide,
+.backSide::before {
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+/* Rotação para a parte traseira */
+.backSide {
+transform: rotateY(180deg);
+}
+
+/* Efeito de gradiente animado para o lado frontal e traseiro */
+.frontSide::before,
+.backSide::before {
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+content: '';
+width: 110%;
+height: 110%;
+position: absolute;
+z-index: -1;
+border-radius: 1em;
+filter: blur(20px);
+animation: animate 5s linear infinite;
+}
+
+/* Animação do gradiente */
+@keyframes animate {
+0% {
+  opacity: 0.3;
+}
+
+80% {
+  opacity: 1;
+}
+
+100% {
+  opacity: 0.3;
+}
+}
+
+/* Estilos adicionais para a parte frontal */
+.frontSide {
+  /* Adicione estilos para a imagem na parte frontal */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 1rem;
-  color: white;
-  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
-  font-weight: 700;
-}
-
-.frontSide,
-.frontSide::before {
-  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
-}
-
-.backSide,
-.backSide::before {
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-
-.backSide {
-  transform: rotateY(180deg);
-}
-
-.frontSide::before,
-.backSide::before {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  content: '';
-  width: 110%;
-  height: 110%;
-  position: absolute;
-  z-index: -1;
-  border-radius: 1em;
-  filter: blur(20px);
-  animation: animate 5s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    opacity: 0.3;
-  }
-
-  80% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.3;
-  }
-}
-
-/* Your existing CSS code */
-
-.frontSide {
-    /* Add styles for the front image */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .frontSide img {
-    max-width: 50%; /* Adjust the size of the image as needed */
-   
+  max-width: 50%; /* Ajuste o tamanho da imagem conforme necessário */
+ 
 }
 
-/* Additional CSS for back side text */
+
+/* Estilos adicionais para o texto na parte traseira */
 .backSide p {
-    font-size: 1.2em;
-    /* Add other styles as needed */
+  font-size: 1.2em;
+  /* Adicione outros estilos conforme necessário */
 }
+
+/* Estilos para imagens */
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-/* Telas pequenas */
+
+/* Estilos para telas pequenas */
 @media (max-width: 768px) {
-    /* Ajuste os estilos para telas pequenas */
+  /* Ajuste os estilos para telas pequenas */
 }
 
-/* Telas médias */
+/* Estilos para telas médias */
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* Ajuste os estilos para telas médias */
+  /* Ajuste os estilos para telas médias */
 }
 
-/* Telas grandes */
+/* Estilos para telas grandes */
 @media (min-width: 1025px) {
-    /* Ajuste os estilos para telas grandes */
+  /* Ajuste os estilos para telas grandes */
 }
