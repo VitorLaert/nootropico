@@ -1,8 +1,8 @@
 main {
-   width: auto;
+    width: auto;
     max-width: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 20px;
@@ -12,14 +12,13 @@ main {
 }
 body{
     background-color: #18242B;
-    margin: 0;
+    
     
 }
 .container {
     width: 100%;
     max-width: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
+    
   }
 .uso-terapeutico{
     text-align: center;
@@ -30,9 +29,10 @@ body{
 
 .linha-foto{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2px; 
+    grid-template-columns: 1fr;
+    grid-gap: 2px;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 
@@ -47,27 +47,30 @@ body{
 }
 
 .box2 img {
-    max-width: 35%; /* Ajuste para a largura total da imagem */
+    max-width: 65%; /* Ajuste para a largura total da imagem */
 }
 .titulo-inicio{
+    display: grid;
+    grid-template-columns: 2fr;
     text-align: center;
     font-family: "Helvetica", "Lucida Grande", sans-serif;
     color: #fafafa;
     font-size: 20px;
+    margin-top: 50px;
 }
 
 .texto-inicio{
+    display: grid;
+    grid-template-columns: 2fr;
     text-align: justify;
     font-family: "Helvetica", "Lucida Grande", sans-serif;
     color: #fafafa;
     font-size: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 0;
-    margin-bottom: 50px;
+   padding: 1.5em;
 }
 .titulo2{
-    margin-bottom: 150px;
+
+    margin-bottom: 50px;
     text-align: center;
     font-family: "Helvetica", "Lucida Grande", sans-serif;
     color: #fafafa;
@@ -75,3 +78,9 @@ body{
     
 }
 
+@media (min-width: 768px) {
+    /* A partir de 768px de largura da tela, volta para o layout original */
+    .linha-foto {
+        grid-template-columns: 2fr 1fr;
+    }
+}

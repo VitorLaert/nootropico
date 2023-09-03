@@ -1,18 +1,26 @@
-.rodape{
-    display: flex;
-  justify-content: space-evenly; /* Distribui os cards uniformemente */
-  margin-top: 300px;
-}
+
+    .rodape {
+        overflow: inherit;
+        box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+        text-align: center;
+        border-radius: 1rem;
+        position: absolute; /* Mude para 'absolute' */
+        left: 30%; /* Move o elemento para o centro horizontalmente */
+        transform: translate(-50%, -50%); /* Centraliza completamente o elemento */
+        margin-top: 500px;
+      }
+      
+
 .main {
     display: grid;
     place-items: center;
     width: 190px;
     height: 254px;
+    margin-bottom: 80px;
 }
-
 .card {
-    width: 190px;
-    height: 254px;
+    width: 130px; /* Reduza a largura desejada */
+    height: 180px; /* Reduza a altura desejada */
     background: 	#111111;
     padding: 2rem 1.5rem;
     transition: box-shadow .3s ease, transform .2s ease;
@@ -21,6 +29,9 @@
     position: absolute;
     border-radius: 10px; /* Adicione o raio do arredondamento desejado aqui */
 }
+
+
+
 
 
 .card-info {
@@ -158,3 +169,32 @@
     object-fit: cover; /* Ajusta a imagem para preencher o círculo mantendo sua proporção */
 }
 
+@media (min-width: 768px){
+    .rodape{
+        overflow: inherit;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem;
+  margin-top: 500px;
+  left: 50%; /* Move o elemento para o centro horizontalmente */
+  display: flex; /* Transforma o elemento .rodape em um container flex */
+  justify-content: space-evenly; /* Distribui os itens uniformemente com espaço entre eles */
+    }
+    .card {
+        width: 190px;
+        height: 254px;
+        background: 	#111111;
+        padding: 2rem 1.5rem;
+        transition: box-shadow .3s ease, transform .2s ease;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        border-radius: 10px; /* Adicione o raio do arredondamento desejado aqui */
+    }
+
+}
+
+  
+  

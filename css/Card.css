@@ -1,13 +1,19 @@
 /* Estilização do container que segura os cards */
 .cardContainer {
-  display: flex;
-  justify-content: space-evenly; /* Distribui os cards uniformemente */
-  margin-bottom: 30px;
+  overflow: inherit;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem;
 }
 .cardContainer2 {
-  display: flex;
-  justify-content: space-evenly; /* Distribui os cards uniformemente */
-  
+ overflow: inherit;
+ box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+ text-align: center;
+ border-radius: 1rem;
+ position: relative;
+ margin: 0.5rem;
 }
 
 /* Estilos para cada card individual */
@@ -140,17 +146,16 @@ img {
   height: auto;
 }
 
-/* Estilos para telas pequenas */
-@media (max-width: 768px) {
-  /* Ajuste os estilos para telas pequenas */
-}
 
-/* Estilos para telas médias */
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Ajuste os estilos para telas médias */
-}
 
-/* Estilos para telas grandes */
-@media (min-width: 1025px) {
-  /* Ajuste os estilos para telas grandes */
+@media (min-width: 768px) {
+  /* A partir de 768px de largura da tela, volta para o layout original */
+  .cardContainer {
+    display: flex;
+    justify-content: space-evenly; /* Distribui os cards uniformemente */
+    margin-bottom: 30px;  }
+    .cardContainer2 {
+      display: flex;
+      justify-content: space-evenly; /* Distribui os cards uniformemente */
+      margin-bottom: 30px;  }
 }
