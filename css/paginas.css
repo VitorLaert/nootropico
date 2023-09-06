@@ -1,4 +1,12 @@
-main {
+
+body{
+    background-color: #18242B;
+    
+    
+}
+.container {
+    width: 100%;
+    max-width: 100%;
     width: auto;
     max-width: 100%;
     margin-left: 5%;
@@ -9,15 +17,6 @@ main {
     line-height: 1.5;
     font-family: "Helvetica", "Lucida Grande", sans-serif;
     color: #fafafa;
-}
-body{
-    background-color: #18242B;
-    
-    
-}
-.container {
-    width: 100%;
-    max-width: 100%;
     
   }
 .uso-terapeutico{

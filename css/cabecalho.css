@@ -3,12 +3,12 @@
     font-size: 0.8;
     font-weight: bold;
     letter-spacing: 0.3;
-    background-color: #db7af0;
+    background-color: #8832a2;
     margin: auto;
 }
 .cabecalho-logo{
-    padding: 25px;
-    width: 530px;
+    padding: 1px;
+    width: 430px;
 }
 .cabecalho-menu{
     padding: 10px;
@@ -25,4 +25,13 @@
     padding: 5px 5px;
     color: black;          /* Define a cor do texto como preto */
     text-decoration: none; /* Remove o sublinhado */
+    
+}
+
+header a:hover{
+    color: #8832a2;
+    transform: scale(1.05);
+}
+header a:hover ::after{
+    width: 100%;
 }
