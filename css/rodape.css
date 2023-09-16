@@ -1,200 +1,220 @@
+/* Define um estilo para a classe .rodape */
+.rodape {
+    overflow: inherit; /* Define overflow como 'inherit' */
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light); /* Adiciona uma sombra ao elemento */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    border-radius: 1rem; /* Adiciona um raio de borda arredondada */
+    position: absolute; /* Define a posição como 'absolute' */
+    left: 30%; /* Move o elemento para o centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza completamente o elemento */
+    margin-top: 500px; /* Define a margem superior como 500px */
+}
 
-    .rodape {
-        overflow: inherit;
-        box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-        text-align: center;
-        border-radius: 1rem;
-        position: absolute; /* Mude para 'absolute' */
-        left: 30%; /* Move o elemento para o centro horizontalmente */
-        transform: translate(-50%, -50%); /* Centraliza completamente o elemento */
-        margin-top: 500px;
-      }
-      
-
+/* Define um estilo para a classe .main */
 .main {
-    display: grid;
-    place-items: center;
-    width: 190px;
-    height: 254px;
-    margin-bottom: 80px;
+    display: grid; /* Usa um layout de grid */
+    place-items: center; /* Centraliza os itens dentro do grid */
+    width: 190px; /* Define a largura como 190px */
+    height: 254px; /* Define a altura como 254px */
+    margin-bottom: 80px; /* Define a margem inferior como 80px */
 }
+
+/* Define um estilo para a classe .card */
 .card {
-    width: 130px; /* Reduza a largura desejada */
-    height: 180px; /* Reduza a altura desejada */
-    background: 	#111111;
-    padding: 2rem 1.5rem;
-    transition: box-shadow .3s ease, transform .2s ease;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    border-radius: 10px; /* Adicione o raio do arredondamento desejado aqui */
+    width: 130px; /* Define a largura como 130px */
+    height: 180px; /* Define a altura como 180px */
+    background: 	#111111; /* Define o fundo como preto (#111111) */
+    padding: 2rem 1.5rem; /* Define preenchimento interno */
+    transition: box-shadow .3s ease, transform .2s ease; /* Adiciona transições para sombra e transformação */
+    display: flex; /* Usa um layout flexível */
+    flex-direction: column; /* Define a direção da coluna */
+    position: absolute; /* Define a posição como 'absolute' */
+    border-radius: 10px; /* Adiciona um raio de borda arredondada */
 }
 
-
-
-
-
+/* Define um estilo para a classe .card-info */
 .card-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Usa um layout flexível */
+    flex-direction: column; /* Define a direção da coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
 }
 
+/* Define um estilo para a classe .card-avatar */
 .card-avatar {
-    background: radial-gradient(#A8A6B6, #B3B1BF, #BDBBC7, #C5C4CE, #E2E2E7);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    transition: transform .2s ease;
+    background: radial-gradient(#A8A6B6, #B3B1BF, #BDBBC7, #C5C4CE, #E2E2E7); /* Cria um gradiente radial como fundo */
+    width: 100px; /* Define a largura como 100px */
+    height: 100px; /* Define a altura como 100px */
+    border-radius: 50%; /* Define um raio de borda arredondada para criar um círculo */
+    transition: transform .2s ease; /* Adiciona uma transição para a transformação */
 }
 
+/* Define um estilo para os elementos <svg> dentro da classe .card-avatar */
 .card-avatar svg {
-    padding-top: 5px;
-    height: 80px;
-    width: 100px;
-    fill: #515F65;
+    padding-top: 5px; /* Adiciona um preenchimento superior */
+    height: 80px; /* Define a altura como 80px */
+    width: 100px; /* Define a largura como 100px */
+    fill: #515F65; /* Define a cor de preenchimento */
 }
 
+/* Define um estilo para a classe .card-social */
 .card-social {
-    display: flex;
-    justify-content: space-around;
-    width: 190px;
-    margin-top: 10%;
-    text-align: center;
+    display: flex; /* Usa um layout flexível */
+    justify-content: space-around; /* Distribui o espaço uniformemente entre os elementos */
+    width: 190px; /* Define a largura como 190px */
+    margin-top: 10%; /* Define uma margem superior de 10% */
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
 
+/* Define um estilo para a classe .card-social-icon */
 .card-social-icon {
-    list-style: none;
-    color: #515F65;
-    font-size: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    list-style: none; /* Remove a marcação de lista */
+    color: #515F65; /* Define a cor do texto */
+    font-size: 0.5em; /* Define o tamanho da fonte */
+    display: flex; /* Usa um layout flexível */
+    flex-direction: column; /* Define a direção da coluna */
+    align-items: center; /* Centraliza horizontalmente os elementos */
 }
 
+/* Define um estilo para os elementos <svg> dentro da classe .card-social-icon */
 .card-social-icon svg {
-    display: block;
-    height: 20px;
-    width: 20px;
-    fill: #ffffff;
-    cursor: pointer;
+    display: block; /* Exibe os elementos como blocos */
+    height: 20px; /* Define a altura como 20px */
+    width: 20px; /* Define a largura como 20px */
+    fill: #ffffff; /* Define a cor de preenchimento como branco */
+    cursor: pointer; /* Altera o cursor para um ponteiro */
 }
 
+/* Define um estilo para a classe .card-title */
 .card-title {
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 600;
-    line-height: 2rem;
-    margin-top: 5px;
+    color: #ffffff; /* Define a cor do texto como branco */
+    font-size: 1.5em; /* Define o tamanho da fonte como 1.5em */
+    font-weight: 600; /* Define o peso da fonte como 600 */
+    line-height: 2rem; /* Define a altura da linha */
+    margin-top: 5px; /* Define uma margem superior de 5px */
 }
 
+/* Define um estilo para a classe .card-subtitle */
 .card-subtitle {
-    color: #ffffff;
-    font-size: 1.0em;
+    color: #ffffff; /* Define a cor do texto como branco */
+    font-size: 1.0em; /* Define o tamanho da fonte como 1.0em */
 }
 
+/* Define um estilo para a classe .contact-title */
 .contact-title {
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-top: 45%;
-    padding-bottom: 25px;
-    margin-left: 30px;
+    color: #ffffff; /* Define a cor do texto como branco */
+    font-size: 1.5em; /* Define o tamanho da fonte como 1.5em */
+    font-weight: 600; /* Define o peso da fonte como 600 */
+    margin-top: 45%; /* Define uma margem superior de 45% */
+    padding-bottom: 25px; /* Define um preenchimento inferior de 25px */
+    margin-left: 30px; /* Define uma margem esquerda de 30px */
 }
 
+/* Define um estilo para a classe .card-contact */
 .card-contact {
-    color: #ffffff;
-    font-size: 0.7em;
+    color: #ffffff; /* Define a cor do texto como branco */
+    font-size: 0.7em; /* Define o tamanho da fonte como 0.7em */
 }
 
+/* Define um estilo para a classe .icon-contact */
 .icon-contact {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    margin-bottom: 15px;
+    list-style: none; /* Remove a marcação de lista */
+    display: flex; /* Usa um layout flexível */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    margin-left: 30px; /* Define uma margem esquerda de 30px */
+    margin-bottom: 15px; /* Define uma margem inferior de 15px */
 }
 
+/* Define um estilo para os elementos <svg> dentro da classe .icon-contact */
 .icon-contact svg {
-    display: block;
-    height: 18px;
-    width: 18px;
-    fill: #ffffff;
-    padding-right: 5px;
+    display: block; /* Exibe os elementos como blocos */
+    height: 18px; /* Define a altura como 18px */
+    width: 18px; /* Define a largura como 18px */
+    fill: #ffffff; /* Define a cor de preenchimento como branco */
+    padding-right: 5px; /* Adiciona um preenchimento direito de 5px */
 }
 
+/* Define um estilo para a classe .card quando hover */
 .card:hover {
-    box-shadow: 0 10px 50px #9932cc;
+    box-shadow: 0 10px 50px #9932cc; /* Altera a sombra quando hover */
 }
 
+/* Define um estilo para a classe .card-info quando hover na classe .card */
 .card:hover .card-info {
-    transform: translateY(-5%);
+    transform: translateY(-5%); /* Aplica uma transformação ao hover */
 }
 
+/* Define um estilo para a classe .card-avatar quando hover */
 .card-avatar:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta a escala quando hover */
 }
 
+/* Define um estilo para o elemento com id 'cs1' quando hover */
 #cs1:hover {
-    transform: scale(2.0);
+    transform: scale(2.0); /* Aumenta a escala quando hover */
 }
 
+/* Define um estilo para o elemento com id 'cs2' quando hover */
 #cs2:hover {
-    transform: scale(2.0);
+    transform: scale(2.0); /* Aumenta a escala quando hover */
 }
 
+/* Define um estilo para o elemento com id 'cs3' quando hover */
 #cs3:hover {
-    transform: scale(2.0);
+    transform: scale(2.0); /* Aumenta a escala quando hover */
 }
 
+/* Define um estilo para a classe .main quando hover e o elemento com id 'c1' */
 .main:hover #c1 {
-    transform: translateX(0px);
+    transform: translateX(0px); /* Move horizontalmente quando hover */
 }
 
+/* Define um estilo para a classe .main quando hover e o elemento com id 'c2' */
 .main:hover #c2 {
-    transform: translateX(200px);
+    transform: translateX(200px); /* Move horizontalmente quando hover */
 }
 
+/* Define um estilo para a classe .rounded-avatar */
 .rounded-avatar {
-    width: 100px; /* Largura do círculo */
-    height: 100px; /* Altura do círculo */
-    border-radius: 50%; /* Define a borda como um círculo */
+    width: 100px; /* Define a largura como 100px */
+    height: 100px; /* Define a altura como 100px */
+    border-radius: 50%; /* Define um raio de borda arredondada para criar um círculo */
     overflow: hidden; /* Certifica-se de que a imagem não ultrapasse o círculo */
 }
 
+/* Define um estilo para a imagem dentro da classe .rounded-avatar */
 .rounded-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta a imagem para preencher o círculo mantendo sua proporção */
 }
 
-@media (min-width: 768px){
-    .rodape{
-        overflow: inherit;
-  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-  text-align: center;
-  border-radius: 1rem;
-  position: relative;
-  margin: 0.5rem;
-  margin-top: 500px;
-  left: 50%; /* Move o elemento para o centro horizontalmente */
-  display: flex; /* Transforma o elemento .rodape em um container flex */
-  justify-content: space-evenly; /* Distribui os itens uniformemente com espaço entre eles */
+/* Define um estilo de mídia para telas maiores que 768px */
+@media (min-width: 768px) {
+    /* Altera o estilo da classe .rodape para telas maiores */
+    .rodape {
+        overflow: inherit; /* Define overflow como 'inherit' */
+        box-shadow: 0px 2px 8px 0px var(--clr-gray-light); /* Adiciona uma sombra ao elemento */
+        text-align: center; /* Centraliza o texto horizontalmente */
+        border-radius: 1rem; /* Adiciona um raio de borda arredondada */
+        position: relative; /* Define a posição como 'relative' */
+        margin: 0.5rem; /* Define margens */
+        margin-top: 500px; /* Define uma margem superior de 500px */
+        left: 50%; /* Move o elemento para o centro horizontalmente */
+        display: flex; /* Transforma o elemento .rodape em um container flex */
+        justify-content: space-evenly; /* Distribui os itens uniformemente com espaço entre eles */
     }
+
+    /* Altera o estilo da classe .card para telas maiores */
     .card {
-        width: 190px;
-        height: 254px;
-        background: 	#111111;
-        padding: 2rem 1.5rem;
-        transition: box-shadow .3s ease, transform .2s ease;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
+        width: 190px; /* Define a largura como 190px */
+        height: 254px; /* Define a altura como 254px */
+        background: 	#111111; /* Define o fundo como preto (#111111) */
+        padding: 2rem 1.5rem; /* Define preenchimento interno */
+        transition: box-shadow .3s ease, transform .2s ease; /* Adiciona transições para sombra e transformação */
+        display: flex; /* Usa um layout flexível */
+        flex-direction: column; /* Define a direção da coluna */
+        position: absolute; /* Define a posição como 'absolute' */
         border-radius: 10px; /* Adicione o raio do arredondamento desejado aqui */
     }
-
 }
-
-  
-  
