@@ -1,0 +1,125 @@
+/* Define estilos básicos para todos os elementos, removendo margens e preenchimentos padrão */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para links (âncoras) não visitados na barra de navegação */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s; /* Efeito de transição suave ao passar o mouse sobre os links */
+}
+
+/* Estilos para links quando estão no estado "hover" (mouse sobre eles) na barra de navegação */
+nav a:hover {
+  color: #f400a1; /* Cor de azul que combina com a cor de fundo do cabeçalho */
+  opacity: 1; /* Mantém a opacidade máxima ao passar o mouse sobre os links */
+}
+
+/* Estilos para a imagem dentro do elemento com a classe "logo" */
+.logo img {
+  max-width: 45%; /* Limita a largura máxima da imagem a 45% do elemento pai */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para a barra de navegação */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #8832a2; /* Cor de fundo da barra de navegação */
+  height: 10vh; /* Altura da barra de navegação */
+}
+
+/* Estilos para a seção principal */
+main {
+  background: url("bg.jpg") no-repeat center center; /* Define uma imagem de fundo */
+  background-size: cover; /* Redimensiona a imagem de fundo para cobrir todo o elemento */
+  height: 92vh; /* Altura da seção principal */
+}
+
+/* Estilos para a lista de navegação */
+.nav-list {
+  list-style: none; /* Remove os marcadores de lista padrão */
+  display: flex; /* Exibe os itens de lista em linha */
+}
+
+/* Estilos para os itens de lista na navegação */
+.nav-list li {
+  letter-spacing: 3px; /* Espaçamento entre as letras */
+  margin-left: 32px; /* Espaçamento à esquerda entre os itens de lista */
+}
+
+/* Estilos para o ícone de menu mobile */
+.mobile-menu {
+  display: none; /* Inicialmente, o ícone de menu mobile está oculto */
+  cursor: pointer; /* Adiciona o cursor de mão ao passar o mouse */
+}
+
+/* Estilos para as linhas do ícone de menu mobile */
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s; /* Efeito de transição suave nas linhas do ícone */
+}
+
+/* Estilos aplicados quando a tela tem uma largura máxima de 999px (dispositivos móveis) */
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal da página */
+  }
+  .nav-list {
+    position: absolute; /* Posiciona a lista de navegação absolutamente */
+    top: 8vh;
+    right: 0;
+    width: 50vw; /* Largura da lista de navegação em telas menores */
+    height: 92vh;
+    background: #23232e; /* Cor de fundo da lista de navegação */
+    flex-direction: column; /* Altera a direção da lista para vertical */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-around; /* Espaço igual entre os itens */
+    transform: translateX(100%); /* Inicialmente, a lista está fora da tela */
+    transition: transform 0.3s ease-in; /* Efeito de transição suave ao mostrar/ocultar a lista */
+  }
+  .nav-list li {
+    margin-left: 0; /* Remove o espaçamento à esquerda entre os itens de lista */
+    opacity: 0; /* Inicialmente, os itens de lista estão ocultos */
+  }
+  .mobile-menu {
+    display: block; /* Exibe o ícone de menu mobile */
+  }
+}
+
+/* Estilos aplicados quando a classe "active" é adicionada à lista de navegação */
+.nav-list.active {
+  transform: translateX(0); /* Move a lista para a posição visível */
+}
+
+/* Animação para mostrar os itens de lista quando a classe "active" é adicionada */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação para o ícone de menu mobile quando a classe "active" é adicionada */
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}

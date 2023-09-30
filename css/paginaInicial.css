@@ -1,0 +1,131 @@
+/* Define a cor de fundo do corpo da página */
+body {
+    background-color: #101010;
+}
+
+/* Estiliza o container principal da página */
+section {
+    width: 100%;
+
+    width: auto;
+  
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+    background-color: #202020;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 6px solid transparent; /* Começa com uma borda transparente */
+    animation: borderAnimation 4s linear infinite; /* Inicia a animação */
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+@keyframes borderAnimation {
+    0% {
+      border-color: transparent; /* Inicia com borda transparente */
+    }
+    25% {
+      border-color: #8832a2; /* Cor verde na parte superior */
+    }
+    50% {
+      border-color: transparent; /* Bordas transparentes novamente */
+    }
+    75% {
+      border-color: #8832a2; /* Cor verde na parte inferior */
+    }
+    100% {
+      border-color: transparent; /* Termina com borda transparente */
+    }
+  }
+
+
+/* Define a formatação para elementos com classe "uso-terapeutico" */
+.uso-terapeutico {
+    text-align: center;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+}
+
+/* Define a formatação para elementos com classe "linha-foto" */
+.linha-foto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Define a formatação para elementos com classe "box" */
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    height: 100%; /* Certifique-se de que a altura da div seja 100% para centralização vertical */
+}
+
+/* Define a formatação para imagens dentro de elementos com classe "box2" */
+.box2 img {
+    max-width: 65%; /* Ajuste para a largura total da imagem */
+}
+
+/* Define a formatação para elementos com classe "titulo-inicio" */
+.titulo-inicio {
+    display: grid;
+    grid-template-columns: 2fr;
+    text-align: center;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+/* Define a formatação para elementos com classe "texto-inicio" */
+.texto-inicio {
+    display: grid;
+    grid-template-columns: 2fr;
+    text-align: justify;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+    padding: 1.5em;
+    padding-bottom: 55px;
+}
+
+/* Define a formatação para elementos com classe "titulo2" */
+.titulo2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+}
+
+/* Define um estilo para elementos dentro de uma mídia de tela com largura mínima de 768px */
+@media (min-width: 768px) {
+    /* A partir de 768px de largura da tela, volta para o layout original */
+    .linha-foto {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+/* Estiliza a imagem GIF responsiva */
+.responsive-gif {
+  width: 100%; /* Ajusta a largura da imagem para cobrir toda a largura do banner */
+  height: auto; /* Mantém a proporção original da imagem */
+}
+
+/* Outras regras de estilo para o elemento .banner-full-width */
+.banner-full-width {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centraliza o conteúdo horizontalmente, se necessário */
+}
+

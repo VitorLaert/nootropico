@@ -103,6 +103,17 @@
   filter: blur(20px); /* Aplica um desfoque */
   animation: animate 5s linear infinite; /* Animação de gradiente */
 }
+/* Estilos para o título nos cards de slideshow */
+.slideshow-container .title {
+  text-align: center; /* Centraliza horizontalmente o título */
+}
+/* Estilos para as imagens nos cards de slideshow */
+.slideshow-container .mySlides {
+  max-width: 60%; /* Largura máxima da imagem */
+  height: auto; /* Altura automática para manter a proporção */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: block; /* Exibe as imagens como blocos para centralização vertical */
+}
 
 /* Animação do gradiente */
 @keyframes animate {
