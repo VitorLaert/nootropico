@@ -1,0 +1,170 @@
+/* Importa a fonte "Inter" do Google Fonts com pesos 400, 500, 600 e 700 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* Define o modelo de caixa como "border-box" para todos os elementos HTML */
+html {
+  box-sizing: border-box;
+}
+
+/* Define o modelo de caixa como "border-box" para todos os elementos e seus pseudoelementos (antes e depois) */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Define estilos específicos para telas com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+  /* Aumenta o preenchimento interno do elemento com a classe "container" */
+  .container {
+      padding: 1em;
+  }
+
+  /* Reduz o tamanho da fonte para cabeçalhos dentro de elementos com a classe "container" */
+  .container h1 {
+      font-size: 1.5rem;
+  }
+
+  /* Ajusta a largura máxima do elemento com a classe "details-modal" */
+  .details-modal {
+      width: 90%;
+      max-width: 400px;
+  }
+}
+
+/* Estilos para o botão */
+.button {
+  /* Aparência do botão */
+  appearance: none;
+  background: #e18dff;
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1em;
+}
+
+/* Estilos de hover para o botão */
+.button:hover {
+  background-color: #310237;
+}
+
+/* Estilos para o modal de detalhes */
+.details-modal {
+  background: #737373;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o centro do modal */
+  width: 60em;
+  text-align: left;
+  max-height: 90vh; /* Altura máxima da tela */
+  overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para o botão de fechar no modal de detalhes */
+.details-modal .details-modal-close {
+  align-items: center;
+  color: #111827;
+  display: flex;
+  height: 4.5em;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4.5em;
+}
+
+/* Estilos para o título no modal de detalhes */
+.details-modal .details-modal-title {
+  color: #111827;
+  padding: 1.5em 2em;
+  pointer-events: all;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilos para o texto dentro do título no modal de detalhes */
+.details-modal .details-modal-title h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Estilos para o conteúdo no modal de detalhes */
+.details-modal .details-modal-content {
+  border-top: 1px solid #e0e0e0;
+  padding: 2em;
+  pointer-events: all;
+  overflow: auto;
+}
+
+/* Estilos para a sobreposição (overlay) do modal de detalhes */
+.details-modal-overlay {
+  transition: opacity 0.2s ease-out;
+  pointer-events: none;
+  background: rgba(245, 194, 248, 0.8);/*sombreamento do pop-up*/
+  position: fixed;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+/* Estilos para a sobreposição (overlay) do modal de detalhes quando o elemento "details" está aberto */
+details[open] .details-modal-overlay {
+  pointer-events: all;
+  opacity: 0.5;
+}
+
+/* Estilos para elementos "details" */
+details summary {
+  list-style: none;
+}
+
+/* Estilos de foco para elementos "details summary" */
+details summary:focus {
+  outline: none;
+}
+
+/* Oculta o marcador padrão do elemento "details summary" no Chrome */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+
+/* Estilos para o elemento com a classe "container" */
+.container {
+  text-align: center;
+  max-width: 800px;
+  padding: 2em;
+}
+
+/* Estilos para cabeçalhos dentro do elemento com a classe "container" */
+.container h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: normal;
+  color: #111827;/*cor dos titulos no pop-up*/
+}
+
+/* Estilos para parágrafos dentro do elemento com a classe "container" */
+.container p {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* Estilos para o título centralizado */
+.centered-title {
+  text-align: center;
+}
