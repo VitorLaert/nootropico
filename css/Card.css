@@ -1,169 +1,151 @@
-/* Estilização do container que segura os cards */
 .cardContainer {
-  overflow: inherit; /* Define o comportamento de overflow */
-  box-shadow: 0px 2px 8px 0px var(--clr-gray-light); /* Sombra do container */
-  text-align: center; /* Centraliza o texto dentro do container */
-  border-radius: 1rem; /* Borda arredondada */
-  position: relative; /* Define a posição do container */
-  margin: 0.5rem; /* Margem ao redor do container */
+  overflow: inherit;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem;
 }
 .cardContainer2 {
- overflow: inherit; /* Define o comportamento de overflow */
- box-shadow: 0px 2px 8px 0px var(--clr-gray-light); /* Sombra do container */
- text-align: center; /* Centraliza o texto dentro do container */
- border-radius: 1rem; /* Borda arredondada */
- position: relative; /* Define a posição do container */
- margin: 0.5rem; /* Margem ao redor do container */
+  overflow: inherit;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem;
 }
 
-/* Estilos para cada card individual */
 .myCard {
-  background-color: transparent; /* Cor de fundo transparente */
-  width: 300px; /* Largura do card */
-  height: 400px; /* Altura do card */
-  perspective: 1000px; /* Define a perspectiva 3D */
-  margin: 20px; /* Margem ao redor do card */
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 20px;
 }
 
-/* Estilos para o título do card */
 .title {
-  font-size: 1.5em; /* Tamanho da fonte */
-  font-weight: 900; /* Peso da fonte */
-  text-align: center; /* Centraliza o texto */
-  margin: 0; /* Remove a margem padrão */
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
 }
 
-/* Estilos para o conteúdo interno do card */
 .innerCard {
-  position: relative; /* Define a posição */
-  width: 100%; /* Largura */
-  height: 100%; /* Altura */
-  text-align: center; /* Centraliza o texto */
-  transition: transform 0.8s; /* Efeito de transição ao girar */
-  transform-style: preserve-3d; /* Preserva a perspectiva 3D */
-  cursor: pointer; /* Altera o cursor ao passar o mouse */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-/* Efeito de rotação ao passar o mouse sobre o card */
 .myCard:hover .innerCard {
-  transform: rotateY(180deg); /* Rotação 3D */
+  transform: rotateY(180deg);
 }
 
-/* Estilos para o lado frontal e traseiro do card */
 .frontSide,
 .backSide {
-  position: absolute; /* Define a posição absoluta */
-  display: flex; /* Exibe elementos como flexíveis */
-  flex-direction: column; /* Define a direção da coluna */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: space-evenly; /* Distribui uniformemente verticalmente */
-  width: 100%; /* Largura */
-  height: 100%; /* Altura */
-  -webkit-backface-visibility: hidden; /* Esconde o verso em navegadores Webkit */
-  backface-visibility: hidden; /* Esconde o verso */
-  border: 1px solid rgba(255, 255, 255, 0.8); /* Borda sólida com transparência */
-  border-radius: 1rem; /* Borda arredondada */
-  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5); /* Sombra */
-  font-weight: 700; /* Peso da fonte */
-  text-align: center; /* Centraliza o texto */
-  font-family: "Helvetica", "Lucida Grande", sans-serif; /* Fonte */
-  color: #fafafa; /* Cor do texto */
-  font-size: 20px; /* Tamanho da fonte */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  text-align: center;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
+  font-size: 20px;
 }
 
-/* Estilos para a parte frontal */
 .frontSide,
 .frontSide::before {
-  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%); /* Fundo com gradiente linear */
+  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
 }
 
-/* Estilos para a parte traseira */
 .backSide,
 .backSide::before {
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); /* Fundo com gradiente linear */
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
-/* Rotação para a parte traseira */
 .backSide {
-  transform: rotateY(180deg); /* Rotação 3D para o verso */
+  transform: rotateY(180deg);
 }
 
-/* Efeito de gradiente animado para o lado frontal e traseiro */
 .frontSide::before,
-.backSide::before {
-  top: 50%; /* Posiciona no topo do elemento pai */
-  left: 50%; /* Posiciona à esquerda do elemento pai */
-  transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
-  content: ''; /* Conteúdo vazio (usado apenas para efeitos) */
-  width: 110%; /* Largura 110% para criar um efeito de expansão */
-  height: 110%; /* Altura 110% para criar um efeito de expansão */
-  position: absolute; /* Define a posição absoluta */
-  z-index: -1; /* Coloca o elemento atrás dos outros */
-  border-radius: 1em; /* Borda arredondada */
-  filter: blur(20px); /* Aplica um desfoque */
-  animation: animate 5s linear infinite; /* Animação de gradiente */
-}
-/* Estilos para o título nos cards de slideshow */
-.slideshow-container .title {
-  text-align: center; /* Centraliza horizontalmente o título */
-}
-/* Estilos para as imagens nos cards de slideshow */
-.slideshow-container .mySlides {
-  max-width: 60%; /* Largura máxima da imagem */
-  height: auto; /* Altura automática para manter a proporção */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  display: block; /* Exibe as imagens como blocos para centralização vertical */
+backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
 }
 
-/* Animação do gradiente */
+.slideshow-container .title {
+  text-align: center;
+}
+
+.slideshow-container .mySlides {
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 @keyframes animate {
   0% {
-    opacity: 0.3; /* Opacidade inicial */
+    opacity: 0.3;
   }
   80% {
-    opacity: 1; /* Opacidade durante a animação */
+    opacity: 1;
   }
   100% {
-    opacity: 0.3; /* Opacidade final */
+    opacity: 0.3;
   }
 }
 
-/* Estilos adicionais para a parte frontal */
 .frontSide {
-  /* Adicione estilos para a imagem na parte frontal */
-  display: flex; /* Exibe elementos como flexíveis */
-  flex-direction: column; /* Define a direção da coluna */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: space-evenly; /* Distribui uniformemente verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .frontSide img {
-  max-width: 50%; /* Tamanho máximo da imagem */
+  max-width: 50%;
 }
 
-/* Estilos adicionais para o texto na parte traseira */
 .backSide p {
-  font-size: 1.2em; /* Tamanho da fonte */
-  /* Adicione outros estilos conforme necessário */
+  font-size: 1.2em;
 }
 
-/* Estilos para imagens */
 img {
-  max-width: 100%; /* Largura máxima da imagem */
-  height: auto; /* Altura automática para manter a proporção */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Media query para telas maiores (a partir de 768px) */
 @media (min-width: 768px) {
-  /* A partir de 768px de largura da tela, volta para o layout original */
   .cardContainer {
-    display: flex; /* Exibe elementos como flexíveis */
-    justify-content: space-evenly; /* Distribui os cards uniformemente */
-    margin-bottom: 30px; /* Margem inferior para espaçamento */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
   }
   .cardContainer2 {
-    display: flex; /* Exibe elementos como flexíveis */
-    justify-content: space-evenly; /* Distribui os cards uniformemente */
-    margin-bottom: 30px; /* Margem inferior para espaçamento */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
   }
 }

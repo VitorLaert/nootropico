@@ -1,7 +1,5 @@
-/* Importa a fonte "Inter" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 
-/* Define variáveis de cores usando CSS Custom Properties (variáveis) */
 :root {
     --color-neutral-0: #0e0c0c;
     --color-neutral-10: #171717;
@@ -9,7 +7,6 @@
     --color-neutral-40: #f5f5f5;
 }
 
-/* Estilos globais para todos os elementos HTML */
 * {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -18,13 +15,11 @@
     letter-spacing: 1px;
 }
 
-/* Estilos para a seção principal */
 main {
     flex: 1;
     margin: 5%;
 }
 
-/* Estilos para o corpo (body) da página */
 body {
     display: flex;
     flex-direction: column;
@@ -33,14 +28,12 @@ body {
     padding: 0;
 }
 
-/* Estilos para o rodapé */
 footer {
     color: var(--color-neutral-40);
     background-color: var(--color-neutral-10);
-    padding: 1.5rem 3.5rem; /* Espaçamento interno do rodapé */
+    padding: 1.5rem 3.5rem;
 }
 
-/* Estilos para o conteúdo dentro do rodapé */
 #footer_content {
     background-color: var(--color-neutral-10);
     display: flex;
@@ -48,21 +41,18 @@ footer {
     padding: 3rem 3.5rem;
 }
 
-/* Ajusta as configurações de grade para os elementos filhos dentro do rodapé */
 #footer_content .footer-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;
-    flex: 1; /* Ocupa o espaço disponível */
+    flex: 1;
 }
 
-/* Estilos para os cabeçalhos dentro do rodapé */
 #footer_contacts h1 {
     margin-bottom: 0.75rem;
 }
 
-/* Estilos para os ícones de mídia social no rodapé */
 #footer_social_media {
     display: flex;
     gap: 2rem;
@@ -81,14 +71,13 @@ footer {
 }
 
 #footer_social_media .footer-link i {
-    font-size: 1.25rem;    
+    font-size: 1.25rem;
 }
 
 #footer_social_media .footer-link:hover {
     opacity: 0.8;
 }
 
-/* Estilos para os links da lista no rodapé */
 .footer-list {
     display: flex;
     flex-direction: column;
@@ -105,7 +94,6 @@ footer {
     color: #7f37c9;
 }
 
-/* Estilos para a seção de inscrição no rodapé */
 #footer_subscribe {
     display: flex;
     flex-direction: column;
@@ -116,7 +104,6 @@ footer {
     color: var(--color-neutral-30);
 }
 
-/* Estilos para o grupo de entrada de texto no rodapé */
 #input_group {
     display: flex;
     align-items: center;
@@ -146,7 +133,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Estilos para o aviso de direitos autorais no rodapé */
 #footer_copyright {
     display: flex;
     justify-content: center;
@@ -156,25 +142,23 @@ footer {
     font-weight: 100;
 }
 
-/* Media query para telas menores que 768px */
 @media screen and (max-width: 768px) {
     footer {
-        padding: 1rem; /* Reduz o padding em telas menores */
+        padding: 1rem;
     }
+
     #footer_content {
-        flex-direction: column; /* Altera a direção da flexbox para empilhar elementos verticalmente */
+        flex-direction: column;
         gap: 2rem;
     }
 }
 
-/* Media query para telas menores que 426px */
 @media screen and (max-width: 426px) {
     footer {
-        padding: 0.5rem; /* Reduz ainda mais o padding em telas muito pequenas */
+        padding: 0.5rem;
     }
 }
 
-/* Estilos para ícones de contato */
 .icon-contact {
     list-style: none;
     display: flex;
@@ -185,11 +169,10 @@ footer {
     display: block;
     height: 18px;
     width: 18px;
-    fill: #ffffff;
+    fill: #dd64d7;
     padding-right: 5px;
 }
 
-/* Estilos para elementos com a classe 'nome' */
 .nome {
     display: grid;
     text-align: justify;
@@ -199,7 +182,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilos para elementos com a classe 'nome2' */
 .nome2 {
     display: grid;
     text-align: justify;
@@ -208,8 +190,6 @@ footer {
     font-size: 15px;
 }
 
-/* Estilos para elementos com a classe 'imgFooter' */
 .imgFooter {
     margin-top: 1%;
 }
-    

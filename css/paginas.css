@@ -1,125 +1,116 @@
-/* Define a cor de fundo do corpo da página */
 body {
-    background-color: #000000;
+  background-color: #000000;
 }
-main{
+
+main {
   margin: 5%;
 }
 
-/* Estiliza o container principal da página */
 section {
-    width: 100%;
-
-    width: auto;
-  
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 20px;
-    line-height: 1.5;
-    font-family: "Helvetica", "Lucida Grande", sans-serif;
-    color: #fafafa;
-    background-color: #202020;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 6px solid transparent; /* Começa com uma borda transparente */
-    animation: borderAnimation 4s linear infinite; /* Inicia a animação */
-    border-radius: 10px;
-    margin-bottom: 30px;
+  width: 100%;
+  width: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
+  background-color: #202020;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 6px solid transparent;
+  animation: borderAnimation 4s linear infinite;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
+
 @keyframes borderAnimation {
-    0% {
-      border-color: transparent; /* Inicia com borda transparente */
-    }
-    25% {
-      border-color: #8832a2; /* Cor verde na parte superior */
-    }
-    50% {
-      border-color: transparent; /* Bordas transparentes novamente */
-    }
-    75% {
-      border-color: #8832a2; /* Cor verde na parte inferior */
-    }
-    100% {
-      border-color: transparent; /* Termina com borda transparente */
-    }
+  0% {
+    border-color: transparent;
   }
 
+  25% {
+    border-color: #8832a2;
+  }
 
-/* Define a formatação para elementos com classe "uso-terapeutico" */
+  50% {
+    border-color: transparent;
+  }
+
+  75% {
+    border-color: #8832a2;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
 .uso-terapeutico {
-    text-align: center;
-    font-family: "Helvetica", "Lucida Grande", sans-serif;
-    color: #fafafa;
+  text-align: center;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
 }
 
-/* Define a formatação para elementos com classe "linha-foto" */
 .linha-foto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2px;
-    margin-bottom: 20px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2px;
+  margin-bottom: 20px;
+  align-items: center;
 }
 
-/* Define a formatação para elementos com classe "box" */
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    height: 100%; /* Certifique-se de que a altura da div seja 100% para centralização vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  height: 100%;
 }
 
-/* Define a formatação para imagens dentro de elementos com classe "box2" */
 .box2 img {
-    max-width: 77%; /* Ajuste para a largura total da imagem */
+  max-width: 77%;
 }
 
-/* Define a formatação para elementos com classe "titulo-inicio" */
 .titulo-inicio {
-    display: grid;
-    grid-template-columns: 2fr;
-    text-align: center;
-    font-family: "Helvetica", "Lucida Grande", sans-serif;
-    color: #fafafa;
-    font-size: 20px;
-    margin-top: 50px;
+  display: grid;
+  grid-template-columns: 2fr;
+  text-align: center;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
+  font-size: 20px;
+  margin-top: 50px;
 }
 
-/* Define a formatação para elementos com classe "texto-inicio" */
 .texto-inicio {
-    display: grid;
-    grid-template-columns: 2fr;
-    text-align: left;
-    font-family: "Helvetica", "Lucida Grande", sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 1.5em;
-    padding-bottom: 55px;
+  display: grid;
+  grid-template-columns: 2fr;
+  text-align: left;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 1.5em;
+  padding-bottom: 55px;
 }
 
-
-/* Define a formatação para elementos com classe "titulo2" */
 .titulo2 {
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: "Helvetica", "Lucida Grande", sans-serif;
-    color: #fafafa;
-    font-size: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
+  font-size: 20px;
 }
 
-/* Define um estilo para elementos dentro de uma mídia de tela com largura mínima de 768px */
 @media (min-width: 768px) {
-    /* A partir de 768px de largura da tela, volta para o layout original */
-    .linha-foto {
-        grid-template-columns: 2fr 1fr;
-    }
+  .linha-foto {
+    grid-template-columns: 2fr 1fr;
+  }
 }
-/* CSS para a apresentação de fotos */
+
 .slideshow-container {
   position: relative;
   max-width: 100%;
@@ -130,54 +121,80 @@ section {
   display: none;
 }
 
-
 .mySlides img {
   max-width: 100%;
-  max-height: 300px; /* Defina a altura máxima desejada */
+  max-height: 300px;
   width: auto;
   height: auto;
 }
 
-
-/* Animação da apresentação de fotos */
 .fade {
   animation-name: fade;
-  animation-duration: 3s; /* Duração de cada slide */
+  animation-duration: 3s;
 }
 
 @keyframes fade {
   0% {
-      opacity: 0.4;
+    opacity: 0.4;
   }
+
   20% {
-      opacity: 1;
+    opacity: 1;
   }
+
   80% {
-      opacity: 1;
+    opacity: 1;
   }
+
   100% {
-      opacity: 0.4;
+    opacity: 0.4;
   }
 }
+
 .imagem-centralizada {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centralizar o conteúdo dentro da div */
+  text-align: center;
 }
 
 .imagem-centralizada figure {
   text-align: center;
-  margin: 0 10px; /* Adicione margens horizontais para espaçar as figuras */
+  margin: 0 10px;
 }
 
 .imagem-centralizada img {
-  max-width: 70%; /* A largura máxima agora é relativa à largura do contêiner pai */
-  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  max-width: 70%;
+  height: auto;
 }
 
 .imagem-centralizada figcaption {
-  font-size: 22px; /* Defina o tamanho da fonte desejado para as legendas */
-  color: white; /* Defina a cor do texto como branca */
-  font-weight: bold; /* Defina a fonte como negrito */
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+}
+
+.modal-container {
+  margin-bottom: 30px;
+}
+
+.titulo-sinteticos {
+  display: grid;
+  grid-template-columns: 2fr;
+  text-align: center;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 1.5em;
+  padding-bottom: 55px;
+  margin-bottom: 2%;
+}
+
+.titulo-inicios {
+  display: grid;
+  grid-template-columns: 2fr;
+  text-align: center;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
+  font-size: 20px;
 }
