@@ -139,3 +139,6 @@ details summary::-webkit-details-marker {
 .centered-title {
   text-align: center;
 }
+.details-modal-content {
+  color: white;
+}

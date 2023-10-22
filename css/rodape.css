@@ -59,16 +59,7 @@ footer {
     margin-top: 1.5rem;
 }
 
-#footer_social_media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color: var(--color-neutral-40);
-    border-radius: 50%;
-    transition: all 0.4s;
-}
+
 
 #footer_social_media .footer-link i {
     font-size: 1.25rem;
@@ -133,14 +124,6 @@ footer {
     opacity: 0.8;
 }
 
-#footer_copyright {
-    display: flex;
-    justify-content: center;
-    background-color: var(--color-neutral-0);
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
-}
 
 @media screen and (max-width: 768px) {
     footer {
@@ -184,7 +167,7 @@ footer {
 
 .nome2 {
     display: grid;
-    text-align: justify;
+    text-align: center;
     font-family: "Helvetica", "Lucida Grande", sans-serif;
     color: #fafafa;
     font-size: 15px;
@@ -192,4 +175,31 @@ footer {
 
 .imgFooter {
     margin-top: 1%;
+}
+
+.footer-list li a {
+    color: white;
+    /* Define a cor do texto como branca */
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+/* Se você desejar estilizar os links quando o mouse passa por cima */
+.footer-list li a:hover {
+    text-decoration: underline;
+    /* Adicione um sublinhado quando o mouse passa por cima */
+    color: lightgray;
+    /* Mude a cor do texto quando o mouse passa por cima, se desejar */
+}
+
+.footer-list .nome2 {
+    text-align: center;
+    /* Justifica o texto dentro desta div */
+}
+.nomer{
+    display: grid;
+    text-align: justify;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #fafafa;
+    font-size: 15px;
 }
