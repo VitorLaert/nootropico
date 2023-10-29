@@ -14,9 +14,11 @@ html {
   .container {
     padding: 1em;
   }
+
   .container h1 {
     font-size: 1.5rem;
   }
+
   .details-modal {
     width: 90%;
     max-width: 400px;
@@ -139,6 +141,7 @@ details summary::-webkit-details-marker {
 .centered-title {
   text-align: center;
 }
+
 .details-modal-content {
   color: white;
 }

@@ -196,7 +196,8 @@ footer {
     text-align: center;
     /* Justifica o texto dentro desta div */
 }
-.nomer{
+
+.nomer {
     display: grid;
     text-align: justify;
     font-family: "Helvetica", "Lucida Grande", sans-serif;

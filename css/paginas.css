@@ -8,15 +8,10 @@ main {
 
 section {
   width: 100%;
-  width: auto;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 20px;
-  line-height: 1.5;
-  font-family: "Helvetica", "Lucida Grande", sans-serif;
-  color: #fafafa;
   background-color: #202020;
   max-width: 90%;
   margin: 0 auto;
@@ -70,6 +65,14 @@ section {
   align-items: center;
   text-align: justify;
   height: 100%;
+  line-height: 1.5;
+  font-family: "Helvetica", "Lucida Grande", sans-serif;
+  color: #fafafa;
+  font-size: 20px;
+  
+}
+.box h2{
+  margin-bottom: 30px;
 }
 
 .box2 img {
@@ -85,24 +88,19 @@ section {
   font-size: 20px;
   margin-top: 50px;
 }
+.titulo-inicio p{
+  text-align: justify;
+}
 
 .texto-inicio {
   display: grid;
   grid-template-columns: 2fr;
-  text-align: left;
+  text-align: justify;
   font-family: "Helvetica", "Lucida Grande", sans-serif;
   color: #ffffff;
   font-size: 20px;
   padding: 1.5em;
   padding-bottom: 55px;
-}
-
-.titulo2 {
-  margin-bottom: 50px;
-  text-align: center;
-  font-family: "Helvetica", "Lucida Grande", sans-serif;
-  color: #fafafa;
-  font-size: 20px;
 }
 
 @media (min-width: 768px) {
@@ -151,29 +149,6 @@ section {
   }
 }
 
-.imagem-centralizada {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.imagem-centralizada figure {
-  text-align: center;
-  margin: 0 10px;
-}
-
-.imagem-centralizada img {
-  max-width: 70%;
-  height: auto;
-}
-
-.imagem-centralizada figcaption {
-  font-size: 22px;
-  color: white;
-  font-weight: bold;
-}
-
 .modal-container {
   margin-bottom: 30px;
 }
@@ -197,4 +172,24 @@ section {
   font-family: "Helvetica", "Lucida Grande", sans-serif;
   color: #fafafa;
   font-size: 20px;
+}
+
+#back-to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #dd64d7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+}
+
+#back-to-top-button:hover {
+  background-color: #8832a2;
 }

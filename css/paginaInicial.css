@@ -2,27 +2,6 @@ body {
   background-color: #000000;
 }
 
-section {
-  width: 100%;
-  width: auto;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 20px;
-  line-height: 1.5;
-  font-family: "Helvetica", "Lucida Grande", sans-serif;
-  color: #fafafa;
-  background-color: #202020;
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 6px solid transparent;
-  animation: borderAnimation 4s linear infinite;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
 @keyframes borderAnimation {
   0% {
     border-color: transparent;
@@ -43,12 +22,6 @@ section {
   100% {
     border-color: transparent;
   }
-}
-
-.uso-terapeutico {
-  text-align: center;
-  font-family: "Helvetica", "Lucida Grande", sans-serif;
-  color: #fafafa;
 }
 
 .linha-foto {
@@ -93,14 +66,6 @@ section {
   padding-bottom: 55px;
 }
 
-.titulo2 {
-  margin-bottom: 50px;
-  text-align: center;
-  font-family: "Helvetica", "Lucida Grande", sans-serif;
-  color: #fafafa;
-  font-size: 20px;
-}
-
 @media (min-width: 768px) {
   .linha-foto {
     grid-template-columns: 2fr 1fr;
@@ -117,4 +82,24 @@ section {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+#back-to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #dd64d7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+}
+
+#back-to-top-button:hover {
+  background-color: #8832a2;
 }
